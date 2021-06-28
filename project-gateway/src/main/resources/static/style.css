@@ -1,0 +1,379 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  background: #f6f6f6;
+}
+.btn {
+  padding: 0.5rem 1rem;
+  background: #006669;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+
+.btn:hover {
+  color: white !important;
+  background: #005255;
+}
+
+header {
+  color: white;
+}
+header {
+  background: #008489;
+  height: 66px;
+}
+
+header .logo {
+  float: left;
+  height: inherit;
+  margin-left: 2em;
+}
+
+header ul {
+  float: right;
+  margin: 0%;
+  padding: 0px;
+}
+
+header ul li {
+  float: left;
+}
+header ul li a {
+  display: block;
+  padding: 21px;
+  font-size: 1.1em;
+  text-decoration: none;
+}
+
+header ul li ul {
+  position: absolute;
+  top: 66px;
+  right: 0px;
+  width: 180px;
+  display: none;
+}
+
+header ul li ul li {
+  width: 100%;
+}
+
+header ul li ul li a {
+  padding: 10px;
+  color: #444;
+  background-color: white;
+}
+
+header ul li ul li a.logout {
+  color: red;
+}
+
+header ul li a:hover {
+  background: #006669;
+  transition: 0.5s;
+}
+
+header ul li:hover ul {
+  display: block;
+}
+header .menu-toggle {
+  display: none;
+}
+
+.page-wrapper a:hover {
+  color: #006669;
+}
+
+.post-slider {
+  position: relative;
+}
+
+.post-slider .next {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  font-size: 2em;
+  color: #006669;
+  cursor: pointer;
+}
+
+.post-slider .top-heading {
+  text-align: right;
+  width: 100%;
+}
+.post-slider .slider-title {
+  float: left;
+  width: 50%;
+  margin: 20px auto;
+}
+
+.post-slider .post-wrapper {
+  width: 84%;
+  height: 350px;
+  margin: 0px auto;
+  overflow: hidden;
+  padding: 10px 0px 10px 0px;
+
+  background-color: white;
+  border-radius: 5px;
+}
+
+.post-slider .post-wrapper .post {
+  display: inline-block;
+  background: white;
+  margin: 0 10px;
+  height: 330px;
+  width: 300px;
+  border-radius: 5px;
+  box-shadow: 1rem 1rem 1rem -1rem #a0a0a033;
+}
+
+.post-slider .post-wrapper .post .post-info {
+  height: 130px;
+}
+
+.post-slider .post-wrapper .post .slider-image {
+  width: 100%;
+  height: 200px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* content */
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.content {
+  width: 90%;
+  margin: 30px auto 30px;
+}
+
+.content .main-content {
+  width: 69%;
+  float: left;
+}
+.content .single-content.single {
+  border-radius: 5px;
+  background: white;
+  padding: 20px 50px;
+  font-size: 1.1em;
+  width: 60%;
+  float: left;
+}
+
+.content .single-content.single .post-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.content .popular .post {
+  border-top: 1px solid #e0e0e0;
+  height: 100px;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.content .popular .post img {
+  height: 60px;
+  width: 60px;
+  float: left;
+  margin-right: 10px;
+}
+
+.content .sidebar {
+  width: 30%;
+  float: right;
+  height: 300 px;
+}
+
+.content .sidebar.single {
+  padding: 0px 10px;
+  height: 10px;
+  width: 25%;
+}
+
+.content .sidebar.single .post {
+  height: 60px;
+  background-color: rgb(255, 255, 255);
+}
+.content .sidebar h1 {
+  position: relative;
+  text-align: center;
+}
+
+.content .main-content .recent-post-title {
+  margin: 20px;
+}
+
+.content .main-content .post {
+  width: 95%;
+  height: 270px;
+  margin: 10px auto;
+  border-radius: 5px;
+  background: white;
+}
+
+.content .main-content .post .post-img {
+  width: 40%;
+  height: 100%;
+  float: left;
+}
+.content .main-content .post .post-preview {
+  width: 55%;
+  padding: 10px;
+  float: right;
+}
+
+.content .main-content .post .read-more {
+  position: relative;
+  bottom: 10px;
+  right: 10px;
+  border: 1px solid;
+  border-radius: 0;
+  color: #005255 !important;
+  background: white;
+  float: right;
+}
+
+.content .main-content .post .read-more:hover {
+  background: #005255;
+  color: white !important;
+  transition: 0.25s;
+}
+
+/*     sidebar       */
+
+.sidebar .titlebar {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .titlebar h1 {
+  padding-left: 30%;
+  display: inline;
+  align-items: center;
+}
+
+.sidebar .titlebar .add-button {
+  display: inline;
+  height: 40px;
+  width: 50px;
+  margin-left: 30px;
+  background-color: white;
+  border: 1px solid #005255;
+  border-radius: 1rem;
+}
+
+.sidebar .titlebar .add-button:hover {
+  color: white !important;
+  background: #005255;
+}
+
+.sidebar .titlebar .add-button #plus-icon {
+  place-items: center;
+}
+
+.content .sidebar .recent-post-title {
+  margin: 20px;
+}
+
+.content .sidebar .post {
+  width: 95%;
+  height: 270px;
+  margin: 10px auto;
+  border-radius: 5px;
+  background: white;
+  align-items: center;
+}
+
+.content .sidebar .post .post-preview {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  display: block;
+}
+
+.content .sidebar .post .read-more {
+  position: relative;
+  bottom: 10px;
+  right: 10px;
+  border: 1px solid;
+  border-radius: 0;
+  color: #005255 !important;
+  background: white;
+  float: right;
+}
+
+.content .sidebar .post .read-more:hover {
+  background: #005255;
+  color: white !important;
+  transition: 0.25s;
+}
+
+/* button */
+
+.post-slider .top-heading .search-container {
+  float: right;
+  position: relative;
+  align-items: center;
+  width: 49%;
+}
+
+.post-slider .top-heading .search-container .search-box {
+  position: absolute;
+  margin-left: 50%;
+  margin-top: 2.5rem;
+  transform: translate(-50%, -50%);
+  background: white;
+  border: 1px solid #005255;
+  height: 30px;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+.search-box:hover > .search-text {
+  width: 240px;
+  padding: 0 6px;
+}
+
+.search-box:hover > .search-btn {
+  background: white;
+  color: black;
+}
+
+.search-btn {
+  color: #e84118;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  cursor: pointer;
+  text-decoration: none;
+}
+.search-btn > i {
+  fontsize: 30px;
+}
+
+.search-text {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  font-weight: normal;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
+
+  /*   width: 250px; */
+}

@@ -1,0 +1,25 @@
+server.port: 8084
+
+eureka:
+  instance:
+    hostname: localhost
+
+spring:
+  application:
+    name: project-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: edit-posts
+          uri: http://localhost:8081/
+          predicates:
+            - Path=/edit-post/**
+        - id: main-application
+          uri: http://localhost:8080/
+          predicates:
+            - Path=/a/**
+
+        - id: register-login
+          uri: http://localhost:8082/
+          predicates:
+            - Path=/register/**

@@ -1,0 +1,151 @@
+    <!DOCTYPE html>
+    <html xmlns:th="https://www.thymeleaf.org/" lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NewsBlog</title>
+        <script src="https://kit.fontawesome.com/a911358f86.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <h1 class="logo-text"><span>NewsBlog</span></h1>
+            </div>
+            <ul class="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="/register">Sign up</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">
+                    <i class="fa fa-bars"></i>
+                    News Blog</a>
+                    <ul>
+                        <li><a href="">DashBoard</a></li>
+                        <li><a href="" class="Logout">Logut</a></li>
+                    </ul>
+                </li>
+                
+            </ul>
+        </header>
+
+        <div class="page-wrapper">
+            <div class="post-slider">
+                <div class="top-heading clearfix">
+
+                    <h1 class="slider-title">Treanding news</h1>
+                    <div class="search-container">
+                        <div class = 'search-box'>
+                            <input class = "search-text" type="text" placeholder = "Search Anything">
+                          <a href="#" class = "search-btn">
+                            <i class="fas fa-search"></i>
+                          </a>
+                          
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <i class="fas fa-chevron-left prev"></i>
+                <i class="fas fa-chevron-right next"></i>
+
+                
+                <div class="post-wrapper">
+                    <div class="post">
+                        <img src="images/Photo-1.png" alt="photo" class="slider-image">
+                        <div class="post-info">
+                            <h4><a href="single.html">Day of recurring has come</a></h4>
+                            
+                        </div>
+                    </div>
+                    <div class="post">
+                        <img src="images/Photo-1.png" alt="photo" class="slider-image">
+                        <div class="post-info">
+                            <h4><a href="single.html">Day of recurring has come</a></h4>
+                            
+                        </div>
+                    </div>
+                    <div class="post">
+                        <img src="images/Photo-1.png" alt="photo" class="slider-image">
+                        <div class="post-info">
+                            <h4><a href="single.html">Day of recurring has come</a></h4>
+                            
+                        </div>
+                    </div>
+                    <div class="post">
+                        <img src="images/Photo-1.png" alt="photo" class="slider-image">
+                        <div class="post-info">
+                            <h4><a href="single.html">Day of recurring has come</a></h4>
+                            
+                        </div>
+                    </div>
+                    <div class="post">
+                        <img src="images/Photo-1.png" alt="photo" class="slider-image">
+                        <div class="post-info">
+                            <h4><a href="single.html">Day of recurring has come</a></h4>
+                            
+                        </div>
+                    </div>
+                    <div class="post">
+                        <img src="images/Photo-1.png" alt="photo" class="slider-image">
+                        <div class="post-info">
+                            <h4><a href="single.html">Day of recurring has come</a></h4>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="content clearfix">
+                <div class="main-content">
+                    <h1 class="recent-post-title">Latest News</h1>
+                    <div class="post" th:each="data: ${jsonString}">
+                        <img src="images/Photo-1.png" class="post-img">
+                        <div class="post-preview">
+                            <h1 th:text="${data?.title}"><a href="single.html">Flying horses found</a></h1>
+                            <i class="far fa-user">Hritik</i>
+                            &nbsp;
+                            <i class="far calander">mar 11 2012</i>
+                            <p class="preview-post" th:text="${data?.text}">
+                                On the other hand, we denounce with righteous indignation and
+                                dislike men who are so beguiled and demoralized by the charms
+                            </p>
+                           <!-- <a th:href="@{/a/single/{id}(id=${data?.id})}" class="btn read-more">Read more</a> -->
+                            <a th:href="doge" class="btn read-more">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <div class="titlebar">
+                        <h1>My Posts</h1>
+                        <a href="/addPost.html"><button class="add-button"><i class="fas fa-plus" id="plus-icon"></i></button></a>
+                     </div>
+                    <div class="post">
+                        <div class="post-preview">
+                            <h1><a href="single.html">Flying horses found</a></h1>
+                            <i class="far fa-user">Hritik</i>
+                            &nbsp;
+                            <i class="far calander">mar 11 2012</i>
+                            <p class="preview-post">
+                                On the other hand, we denounce with righteous indignation and 
+                                dislike men who are so beguiled and demoralized by the charms
+                            </p>
+                            <a href="single.html" class="btn read-more">Read more</a>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+
+            
+        </div>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="js/scripts.js"></script>
+        
+        
+    </body>
+    </html>
